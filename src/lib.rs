@@ -12,8 +12,8 @@
 //! assert_eq!(p.to_string(), "src/lib.rs:5:19");
 //! ```
 //!
-//! If `position` is compiled with the `location` feature, `Position` implements
-//! `oi::Location`, so it can be used with `oi::ErrAt::err_at`:
+//! If `position` is compiled with the `location` feature, on by default, `Position`
+//! implements `oi::Location`, so it can be used with `oi::ErrAt::err_at`:
 //!
 //! ```rust
 //! # #[cfg(feature = "location")]

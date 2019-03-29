@@ -1,6 +1,6 @@
 [package]
 name        = "position"
-version     = "0.0.2"
+version     = "0.0.3"
 description = "☞ Source position objects"
 authors     = ["Casey Rodarmor <casey@rodarmor.com>"]
 license     = "CC0-1.0"
@@ -8,7 +8,7 @@ repository  = "https://github.com/casey/position"
 edition     = "2018"
 
 [features]
-default  = []
+default  = ["location"]
 location = ["oi", "failure"]
 
 [dependencies]
