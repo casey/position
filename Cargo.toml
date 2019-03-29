@@ -1,10 +1,10 @@
 [package]
 name        = "position"
-version     = "0.0.1"
+version     = "0.0.2"
 description = "☞ Source position objects"
 authors     = ["Casey Rodarmor <casey@rodarmor.com>"]
 license     = "CC0-1.0"
-homepage    = "https://github.com/casey/position"
+repository  = "https://github.com/casey/position"
 edition     = "2018"
 
 [features]
