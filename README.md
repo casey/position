@@ -11,22 +11,22 @@ use position::{here, Position};
 let p: Position = here!();
 assert_eq!(p.file(), "src/lib.rs");
 assert_eq!(p.line(), 5);
-assert_eq!(p.column(), 9);
+assert_eq!(p.column(), 19);
 assert_eq!(p.module_path(), "rust_out");
-assert_eq!(p.to_string(), "src/lib.rs:5:9");
+assert_eq!(p.to_string(), "src/lib.rs:5:19");
 ```
 
-If `position` is compiled with the `location` feature, `Position` provides
-an implementation of `oi::Location`, so it can be used with `oi::ErrAt::err_at`:
+If `position` is compiled with the `location` feature, `Position` implements
+`oi::Location`, so it can be used with `oi::ErrAt::err_at`:
 
 ```rust
 # #[cfg(feature = "location")]
 # {
 use std::{io, fs::File};
 use oi::ErrAt;
-use position::here;
+use position::{here, Position};
 
-let result: oi::Result<File, io::Error, position::Position> =
+let result: oi::Result<File, io::Error, Position> =
   File::open("foo.txt").err_at(here!());
 
 assert_eq!(

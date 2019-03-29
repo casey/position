@@ -12,17 +12,17 @@
 //! assert_eq!(p.to_string(), "src/lib.rs:5:19");
 //! ```
 //!
-//! If `position` is compiled with the `location` feature, `Position` provides
-//! implements `oi::Location`, so it can be used with `oi::ErrAt::err_at`:
+//! If `position` is compiled with the `location` feature, `Position` implements
+//! `oi::Location`, so it can be used with `oi::ErrAt::err_at`:
 //!
 //! ```rust
 //! # #[cfg(feature = "location")]
 //! # {
 //! use std::{io, fs::File};
 //! use oi::ErrAt;
-//! use position::here;
+//! use position::{here, Position};
 //!
-//! let result: oi::Result<File, io::Error, position::Position> =
+//! let result: oi::Result<File, io::Error, Position> =
 //!   File::open("foo.txt").err_at(here!());
 //!
 //! assert_eq!(
